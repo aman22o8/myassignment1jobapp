@@ -1,0 +1,35 @@
+.profile_container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  /* width: 90%; */
+  height: 160px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile_logo {
+  height: 35px;
+  width: 35px;
+}
+.profile_name {
+  font: normal normal 500 16px 'Roboto';
+  color: #4f46e5;
+}
+.profile_bio {
+  font: normal normal 400 12px 'Roboto';
+  color: #64748b;
+}
+.failure_profile_btn {
+  align-self: center;
+  border-radius: 7px;
+  height: 36px;
+  width: 100px;
+  background-color: #4f46e5;
+  font: normal normal 400 15px 'Roboto';
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

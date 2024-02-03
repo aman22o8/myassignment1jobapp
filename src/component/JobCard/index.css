@@ -1,0 +1,73 @@
+.nav_link_ {
+  text-decoration: none;
+  background-color: #202020;
+  border-radius: 10px;
+  /* width: 80%; */
+  margin: 10px;
+  padding: 10px;
+}
+.card_header {
+  display: flex;
+  align-items: center;
+}
+.card_job_logo {
+  height: 39px;
+  width: 39px;
+  margin-right: 8px;
+}
+.title_heading {
+  font: normal normal 300 12px 'Roboto';
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+.rating_container {
+  display: flex;
+  align-items: center;
+}
+.stars {
+  color: #fbbf24;
+  height: 15px;
+  width: 15px;
+}
+.title_rating {
+  font: normal normal 300 12px 'Roboto';
+  color: #ffffff;
+  margin: 5px;
+  padding-top: 3px;
+}
+.location_intern_type {
+  font: normal normal 400 15px 'Roboto';
+  color: #ffffff;
+}
+.location_interntype {
+  height: 15px;
+  width: 15px;
+  color: #ffffff;
+  margin-right: 4px;
+}
+.lpa_heading {
+  font: normal normal 400 18px 'Roboto';
+  color: #ffffff;
+}
+.horizontal_line {
+  border: none;
+  border-top: 2px solid #7e858e;
+}
+.desc_heading {
+  font: normal normal 500 17px 'Roboto';
+  color: #ffffff;
+}
+.for_loaction_container {
+  display: flex;
+  align-items: center;
+}
+.location_container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.card_middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

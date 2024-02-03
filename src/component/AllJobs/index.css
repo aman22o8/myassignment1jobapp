@@ -1,4 +1,39 @@
 .all_jobs_container {
   background-color: #000000;
-  height: 100vh;
+  min-height: 100vh;
+}
+.render_container {
+  width: 100%;
+  height: 100%;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+}
+.failure_container {
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.failure_image {
+  height: 350px;
+  width: 275px;
+}
+.failure_heading {
+  font: normal normal 600 21px 'Roboto';
+  color: #ffffff;
+}
+.failure_desc {
+  font: normal normal 400 18px 'Roboto';
+  color: #cbd5e1;
+}
+.list_job_container {
+  margin: 0px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }

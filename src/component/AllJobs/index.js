@@ -3,6 +3,8 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
+import JobCard from '../JobCard'
+import ProfileDetail from '../ProfileDetail'
 
 const apiConstant = {
   INITIAL: 'initial',
@@ -14,7 +16,7 @@ const apiConstant = {
 class AllJobs extends Component {
   state = {
     myJobsArray: [],
-    isLoading: true,
+    // isLoading: true,
     currentprocess: apiConstant.INITIAL,
   }
 
@@ -57,11 +59,9 @@ class AllJobs extends Component {
   renderSuccess = () => {
     const {myJobsArray} = this.state
     return (
-      <ul>
+      <ul className="list_job_container">
         {myJobsArray.map(each => (
-          <li style={{color: '#ffffff'}} key={each.id}>
-            {each.title}
-          </li>
+          <JobCard key={each.id} eachItem={each} />
         ))}
       </ul>
     )
@@ -76,11 +76,14 @@ class AllJobs extends Component {
   renderFailure = () => (
     <div className="failure_container">
       <img
+        className="failure_image"
         src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
         alt="failure view"
       />
-      <h1>Oops! Something Went Wrong</h1>
-      <p>We cannot seems to fing the page you are looking for. </p>
+      <h1 className="failure_heading">Oops! Something Went Wrong</h1>
+      <p className="failure_desc">
+        We cannot seems to fing the page you are looking for.{' '}
+      </p>
       <button className="find_job_btn" type="button">
         Retry
       </button>
@@ -108,7 +111,11 @@ class AllJobs extends Component {
     return (
       <div className="all_jobs_container">
         <Header />
+        <ProfileDetail />
+
+        {/* <div className="render_container"> */}
         {this.renderAllJobs()}
+        {/* </div> */}
       </div>
     )
   }
