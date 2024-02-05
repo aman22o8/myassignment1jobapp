@@ -36,7 +36,7 @@ class Login extends Component {
     const jwtToken = data.jwt_token
     if (response.ok) {
       this.setState({isLoading: false})
-      Cookies.set('JWTtoken', jwtToken, {expires: 30})
+      Cookies.set('jwt_token', jwtToken, {expires: 30})
       history.replace('/')
     } else {
       this.errorMsg(data.error_msg)
@@ -53,7 +53,7 @@ class Login extends Component {
 
   render() {
     const {userName, userPassword, errorMessage, isLoading} = this.state
-    const Token = Cookies.get('JWTtoken')
+    const Token = Cookies.get('jwt_token')
     console.log(Token)
 
     if (Token !== undefined) {

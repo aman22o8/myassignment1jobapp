@@ -9,17 +9,17 @@
   padding: 0px 10px;
 }
 .home_main_heading {
-  font: normal normal 600 40px 'Roboto';
+  font: normal normal 600 35px 'Roboto';
   color: #ffffff;
 }
 .home_desc {
-  font: normal normal 400 20px 'Roboto';
+  font: normal normal 400 19px 'Roboto';
   color: #ffffff;
 }
 .find_job_btn {
   border-radius: 7px;
   height: 36px;
-  width: 150px;
+  width: 120px;
   background-color: #4f46e5;
   font: normal normal 400 15px 'Roboto';
   color: #ffffff;

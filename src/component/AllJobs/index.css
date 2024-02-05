@@ -31,8 +31,7 @@
 }
 .list_job_container {
   margin: 0px;
-  padding-left: 15px;
-  padding-bottom: 15px;
+  padding: 0px 20px 15px 20px;
   list-style-type: none;
   display: flex;
   flex-direction: column;

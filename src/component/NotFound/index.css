@@ -1,0 +1,21 @@
+.not_found_container {
+  padding: 10px 20px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.not_found_image {
+  height: 60%;
+  width: 70%;
+}
+.heading_not_found {
+  font: normal normal 700 25px 'Roboto';
+  color: #ffffff;
+}
+.desc_not_found {
+  font: normal normal 400 17px 'Roboto';
+  color: #ffffff;
+}

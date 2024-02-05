@@ -9,25 +9,33 @@ const Header = props => {
   const {history} = props
   const handleOnClick = () => {
     // console.log(history)
-    Cookies.remove('JWTtoken')
+    Cookies.remove('jwt_token')
     history.replace('./login')
   }
   return (
     <div className="header_container">
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-        alt="website logo"
-        className="header_logo"
-      />
-      <div className="different_options_container">
-        <Link className="nav_link" to="/">
-          <AiFillHome className="icons" />
-        </Link>
-        <Link className="nav_link" to="/jobs">
-          <BsBriefcaseFill className="icons" />
-        </Link>
-        <IoIosLogOut onClick={handleOnClick} className="icons" />
-      </div>
+      <Link to="/" className="nav_link">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+          alt="website logo"
+          className="header_logo"
+        />
+      </Link>
+      <ul className="different_options_container">
+        <li>
+          <Link className="nav_link" to="/">
+            <AiFillHome className="icons" />
+          </Link>
+        </li>
+        <li>
+          <Link className="nav_link" to="/jobs">
+            <BsBriefcaseFill className="icons" />
+          </Link>
+        </li>
+        <li>
+          <IoIosLogOut onClick={handleOnClick} className="icons" />
+        </li>
+      </ul>
     </div>
   )
 }

@@ -23,7 +23,7 @@ class ProfileDetail extends Component {
 
   getMyProfile = async () => {
     this.setState({currentprocess: apiConstant.PROGRESS})
-    const jwtToken = Cookies.get('JWTtoken')
+    const jwtToken = Cookies.get('jwt_token')
     const options = {
       mathid: 'GET',
       headers: {
@@ -33,7 +33,7 @@ class ProfileDetail extends Component {
     const response = await fetch('https://apis.ccbp.in/profile', options)
     const data = await response.json()
     if (response.ok) {
-      console.log(response, data)
+      //   console.log(response, data)
       const updatedProfile = {
         name: data.profile_details.name,
         profileImageUrl: data.profile_details.profile_image_url,
@@ -47,6 +47,8 @@ class ProfileDetail extends Component {
       this.setState({currentprocess: apiConstant.FAILURE})
     }
   }
+
+  handleProfileFailureButton = () => this.getMyProfile()
 
   renderSuccess = () => {
     const {ininialprofile} = this.state
@@ -67,7 +69,11 @@ class ProfileDetail extends Component {
   )
 
   renderFailure = () => (
-    <button className="failure_profile_btn" type="button">
+    <button
+      onClick={this.handleProfileFailureButton}
+      className="failure_profile_btn"
+      type="button"
+    >
       Retry
     </button>
   )
