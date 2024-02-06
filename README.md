@@ -1,6 +1,9 @@
 In this project, let's build a **Jobby App** by applying the concepts we have learned till now.
 ### [click here to visit Link](https://jobbyappaman2o.ccbp.tech)
+
 ### [LinkedIn](https://www.linkedin.com/in/amandhiman22)
+
+
 ### Refer to videos below:
 
 <div style="text-align: center;">
