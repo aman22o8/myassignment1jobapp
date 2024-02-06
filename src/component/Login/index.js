@@ -93,6 +93,8 @@ class Login extends Component {
             Login
           </button>
           {isLoading && <p className="incorrect">{errorMessage}</p>}
+          <h1 className="label_for_input">UserName:rahul</h1>
+          <p className="label_for_input">Password:rahul@2021</p>
         </form>
       </div>
     )

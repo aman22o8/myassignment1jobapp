@@ -15,7 +15,7 @@ const SimilarCard = props => {
     title,
   } = eachItem
   return (
-    <div className="nav_link_">
+    <li className="similar_cards_container">
       <div className="card_header">
         <img
           src={companyLogoUrl}
@@ -49,7 +49,7 @@ const SimilarCard = props => {
         </div>
         {/* <p className="lpa_heading">aman</p> */}
       </div>
-    </div>
+    </li>
   )
 }
 

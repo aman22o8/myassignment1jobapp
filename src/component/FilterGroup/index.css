@@ -1,3 +1,12 @@
 .filter_container {
   margin: 20px;
 }
+.title_heading_filter {
+  font: normal normal 600 18px 'Roboto';
+  color: #ffffff;
+}
+.title_heading_label {
+  font: normal normal 500 15px 'Roboto';
+  color: #ffffff;
+  margin-left: 7px;
+}

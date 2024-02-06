@@ -36,6 +36,29 @@ const Header = props => {
           <IoIosLogOut onClick={handleOnClick} className="icons" />
         </li>
       </ul>
+      {/* For large responsive view */}
+
+      <ul className="different_options_container_responsive">
+        <li className="nav_list">
+          <Link className="nav_link_responsive" to="/">
+            Home
+          </Link>
+        </li>
+        <li className="nav_list">
+          <Link className="nav_link_responsive" to="/jobs">
+            Jobs
+          </Link>
+        </li>
+        <li className="button_list">
+          <button
+            type="button"
+            onClick={handleOnClick}
+            className="icons_responsive"
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
     </div>
   )
 }

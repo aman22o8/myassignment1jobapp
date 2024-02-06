@@ -107,7 +107,8 @@ class AllJobs extends Component {
 
   renderSuccess = () => {
     const {myJobsArray} = this.state
-    if (myJobsArray !== 0) {
+    console.log(myJobsArray.length)
+    if (myJobsArray.length !== 0) {
       return (
         <ul className="list_job_container">
           {myJobsArray.map(each => (
@@ -209,25 +210,33 @@ class AllJobs extends Component {
     return (
       <div className="all_jobs_container">
         <Header />
+        <div className="my_main_job_container">
+          <div className="container_for_profile_filter_group">
+            <ProfileDetail />
+            <FilterGroup
+              employmentTypesList={employmentTypesList}
+              myEmploymentType={this.myEmploymentType}
+              salaryRangesList={salaryRangesList}
+              activeRadioId={activeRadioId}
+              mySalaryRangeType={this.mySalaryRangeType}
+            />
+          </div>
 
-        <SearchBar
-          initialSearch={initialSearch}
-          mySearchevent={this.mySearchevent}
-          mySearchButton={this.mySearchButton}
-        />
-
-        <ProfileDetail />
-        <FilterGroup
-          employmentTypesList={employmentTypesList}
-          myEmploymentType={this.myEmploymentType}
-          salaryRangesList={salaryRangesList}
-          activeRadioId={activeRadioId}
-          mySalaryRangeType={this.mySalaryRangeType}
-        />
-
-        {/* <div className="render_container"> */}
-        {this.renderAllJobs()}
-        {/* </div> */}
+          {/* <div className="render_container"> */}
+          <div className="search_and_all_job">
+            <div className="search_bar_container_initial">
+              <SearchBar
+                initialSearch={initialSearch}
+                mySearchevent={this.mySearchevent}
+                mySearchButton={this.mySearchButton}
+              />
+            </div>
+            <div className="render_all_job_container">
+              {this.renderAllJobs()}
+            </div>
+          </div>
+          {/* </div> */}
+        </div>
       </div>
     )
   }

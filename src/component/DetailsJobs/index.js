@@ -105,9 +105,13 @@ class DetailsJobs extends Component {
         <Header />
         <div className="job_details_container">
           <div className="card_header">
-            <img src={companyLogoUrl} alt={title} className="card_job_logo" />
+            <img
+              src={companyLogoUrl}
+              alt="job details company logo"
+              className="card_job_logo_job_details"
+            />
             <div>
-              <h1 className="title_heading">{title}</h1>
+              <h1 className="title_heading_job_detail">{title}</h1>
               <div className="rating_container">
                 <FaStar className="stars" />
                 <p className="title_rating">{rating}</p>
@@ -130,7 +134,7 @@ class DetailsJobs extends Component {
           <hr className="horizontal_line" />
           <div className="card_footer">
             <div className="desc_link_container">
-              <h1 className="desc_heading">Description</h1>
+              <h1 className="life_at_company_heading">Description</h1>
               <a
                 target="_blank"
                 className="visit_link"
@@ -141,8 +145,8 @@ class DetailsJobs extends Component {
                 <FiExternalLink height={30} width={30} />
               </a>
             </div>
-            <p className="title_heading">{jobDescription}</p>
-            <h1 className="skill_heading">Skills</h1>
+            <p className="description_desc">{jobDescription}</p>
+            <h1 className="life_at_company_heading">Skills</h1>
             <ul className="skill_container">
               {skills.map(each => (
                 <li key={each.name} className="each_skill_list">
@@ -156,18 +160,20 @@ class DetailsJobs extends Component {
               ))}
             </ul>
             <h1 className="life_at_company_heading">Life at Company</h1>
-            <p className="life_at_company_heading_desc">
-              {lifeAtCompany.description}
-            </p>
-            <img
-              src={lifeAtCompany.imageUrl}
-              alt="life at company"
-              className="life_at_company_image"
-            />
+            <div className="like_at_company_container_1">
+              <p className="life_at_company_heading_desc">
+                {lifeAtCompany.description}
+              </p>
+              <img
+                src={lifeAtCompany.imageUrl}
+                alt="life at company"
+                className="life_at_company_image"
+              />
+            </div>
           </div>
         </div>
         <h1 className="similar_job">Similar Jobs</h1>
-        <ul className="list_job_container">
+        <ul className="list_job_container_details">
           {' '}
           {similarJobs.map(each => (
             <SimilarCard key={each.id} eachItem={each} />

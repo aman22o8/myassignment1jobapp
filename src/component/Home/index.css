@@ -4,6 +4,12 @@
   background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .home_container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+    background-size: cover;
+  }
+}
 .footer {
   /* height: 100%; */
   padding: 0px 10px;
@@ -12,6 +18,7 @@
   font: normal normal 600 35px 'Roboto';
   color: #ffffff;
 }
+
 .home_desc {
   font: normal normal 400 19px 'Roboto';
   color: #ffffff;
@@ -27,4 +34,23 @@
   border: none;
   cursor: pointer;
   margin: 12px 0px 1px 0px;
+}
+@media screen and (min-width: 768px) {
+  .home_main_heading {
+    font: normal normal 600 50px 'Roboto';
+    width: 70%;
+    margin: 45px 0px 0px 35px;
+  }
+  .home_desc {
+    font: normal normal 400 25px 'Roboto';
+    width: 70%;
+    margin: 45px 0px 0px 35px;
+  }
+  .find_job_btn {
+    height: 42px;
+    width: 130px;
+    font: normal normal 400 18px 'Roboto';
+    color: #ffffff;
+    margin: 18px 0px 1px 35px;
+  }
 }

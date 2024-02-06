@@ -21,7 +21,7 @@ const FilterGroup = props => {
   return (
     <div className="filter_container">
       <hr className="horizontal_line" />
-      <h1 className="title_heading">Type of Employment</h1>
+      <h1 className="title_heading_filter">Type of Employment</h1>
       <ul>
         {employmentTypesList.map(each => (
           <li key={each.employmentTypeId}>
@@ -30,12 +30,12 @@ const FilterGroup = props => {
               value={each.employmentTypeId}
               type="checkbox"
             />
-            <label className="title_heading">{each.label}</label>
+            <label className="title_heading_label">{each.label}</label>
           </li>
         ))}
       </ul>
       <hr className="horizontal_line" />
-      <h1 className="title_heading">Salary Range</h1>
+      <h1 className="title_heading_filter">Salary Range</h1>
       <ul>
         {salaryRangesList.map(each => (
           <li key={each.salaryRangeId}>
@@ -46,7 +46,7 @@ const FilterGroup = props => {
               value={each.salaryRangeId}
               type="radio"
             />
-            <label className="title_heading">{each.label}</label>
+            <label className="title_heading_label">{each.label}</label>
           </li>
         ))}
       </ul>
