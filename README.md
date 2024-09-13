@@ -1,4 +1,4 @@
-In this project, let's build a **Jobby App** by applying the concepts we have learned till now.
+In this project, i have build a **Jobby App** 
 ### [click here to visit Link](https://jobbyappaman2o.ccbp.tech)
 
 ### [LinkedIn](https://www.linkedin.com/in/amandhiman22)
@@ -77,53 +77,53 @@ In this project, let's build a **Jobby App** by applying the concepts we have le
 ### Completion Instructions
 
 <details>
-<summary>Functionality to be added</summary>
+<summary>Functionality  added</summary>
 <br/>
 
-The app must have the following functionalities
+The app  have the following functionalities
 
 - **Login Route**
 
-  - When invalid credentials are provided and the **Login** button is clicked, then the error message received from the response should be displayed
-  - When valid credentials are provided and the **Login** button is clicked, then the page should be navigated to the Home Route
-  - When an _unauthenticated_ user, tries to access the Home, Jobs and Job Item Details Route, then the page should be navigated to Login Route
-  - When an _authenticated_ user, tries to access the Home, Jobs and Job Item Details Route, then the page should be navigated to the respective route
-  - When an _authenticated_ user, tries to access the Login Route, then the page should be navigated to the Home Route
+  - When invalid credentials are provided and the **Login** button is clicked, then the error message received from the response is displayed
+  - When valid credentials are provided and the **Login** button is clicked, then the page navigates to the Home Route
+  - When an _unauthenticated_ user, tries to access the Home, Jobs and Job Item Details Route, then the page navigates to Login Route
+  - When an _authenticated_ user, tries to access the Home, Jobs and Job Item Details Route, then the page navigates to the respective route
+  - When an _authenticated_ user, tries to access the Login Route, then the page navigates to the Home Route
 
 - **Home Route**
 
   - When an _authenticated_ user opens the Home Route
-    - Clicks on the **Find Jobs** button, then the page should be navigated to the Jobs Route
+    - Clicks on the **Find Jobs** button, then the page navigates to the Jobs Route
 
 - **Jobs Route**
 
   - When an _authenticated_ user opens the Jobs Route
 
-    - An HTTP GET request should be made to **Profile API URL**
-      - **_loader_** should be displayed while fetching the data
-      - After the data is fetched successfully, the response received should be displayed
-      - If the HTTP GET request made is unsuccessful, then the [Failure View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-profile-failure-lg-output.png) should be displayed
-        - When the **Retry** button is clicked, an HTTP GET request should be made to **Profile API URL**
-    - An HTTP GET request should be made to **Jobs API URL** with `employment_type`, `minimum_package`, and `search` as query parameters with empty strings as initial values
-      - **_loader_** should be displayed while fetching the data
+    - if an HTTP GET request is made to **Profile API URL**
+      - **_loader_** is display while fetching the data
+      - After the data is fetched successfully, the response received is displayed
+      - If the HTTP GET request made is unsuccessful, then the [Failure View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-profile-failure-lg-output.png) is displayed
+        - When the **Retry** button is clicked, an HTTP GET request is  made to **Profile API URL**
+    - If an HTTP GET request is made to **Jobs API URL** with `employment_type`, `minimum_package`, and `search` as query parameters with empty strings as initial values
+      - **_loader_** is displayed while fetching the data
       - After the data is fetched successfully, display the list of jobs received from the response
-      - If the HTTP GET request made is unsuccessful, then the [Failure View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-jobs-failure-lg-output.png) should be displayed
-        - When the **Retry** button is clicked, an HTTP GET request should be made to **Jobs API URL**
+      - If the HTTP GET request made is unsuccessful, then the [Failure View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-jobs-failure-lg-output.png) is displayed
+        - When the **Retry** button is clicked, an HTTP GET request is made to **Jobs API URL**
     - When a value is provided in the search input and search icon button is clicked
-      - Make an HTTP GET request to the **Jobs API URL** with `jwt_token` in the Cookies and query parameter `search` with value as the text provided in the search input
-      - **_loader_** should be displayed while fetching the data
-      - After the data is fetched successfully, display the list of jobs received from the response
+      -  An HTTP GET request to the **Jobs API URL** with `jwt_token` in the Cookies and query parameter `search` with value as the text provided in the search input
+      - **_loader_** is displayed while fetching the data
+      - After the data is fetched successfully,it display the list of jobs received from the response
     - When **Employment Types** options are selected
-      - Make an HTTP GET request to the **Jobs API URL** with `jwt_token` in the Cookies and query parameter `employment_type` with value as a list of selected employment type id's as a single string separated by `,`
-      - **_loader_** should be displayed while fetching the data
-      - After the data is fetched successfully, display the list of jobs received from the response
+      - An HTTP GET request to the **Jobs API URL** with `jwt_token` in the Cookies and query parameter `employment_type` with value as a list of selected employment type id's as a single string separated by `,`
+      - **_loader_** is displayed while fetching the data
+      - After the data is fetched successfully,it display the list of jobs received from the response
     - When **Salary Range** is selected
-      - Make an HTTP GET request to the **Jobs API URL** with `jwt_token` in the Cookies and query parameter `minimum_package` with value as the id of the selected salary range
-      - **_loader_** should be displayed while fetching the data
-      - After the data is fetched successfully, display the list of jobs received from the response
-    - When the HTTP GET request made to the **Jobs API URL** returns an empty list for jobs then [No Jobs View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-no-jobs-lg-output.png) should be displayed
+      - An HTTP GET request to the **Jobs API URL** with `jwt_token` in the Cookies and query parameter `minimum_package` with value as the id of the selected salary range
+      -**_loader_** is displayed while fetching the data
+      - After the data is fetched successfully,It display the list of jobs received from the response
+    - When the HTTP GET request made to the **Jobs API URL** returns an empty list for jobs then [No Jobs View](https://assets.ccbp.in/frontend/content/react-js/jobby-app-no-jobs-lg-output.png) is displayed
 
-  - When multiple filters are applied, then the HTTP GET request should be made with all the filters that are applied
+  - When multiple filters are applied, then the HTTP GET request is made with all the filters that are applied
   - For example: When the **Full Time** and **Part Time** employment types are selected, salary range **10 LPA and above** is selected and search input field is empty, then the **Jobs API URL** will be as follows
 
     ```js
@@ -154,19 +154,7 @@ The app must have the following functionalities
   - When the **Jobs** link is clicked, then the page should be navigated to the Jobs Route
   - When the **Logout** button is clicked, then the page should be navigated to the Login Route
 
-- The App is provided with `employmentTypesList`. It consists of a list of employment type objects with the following properties in each employment type object
 
-  |       Key        | Data Type |
-  | :--------------: | :-------: |
-  | employmentTypeId |  String   |
-  |      label       |  String   |
-
-- The App is provided with `salaryRangesList`. It consists of a list of salary range objects with the following properties in each salary range object
-
-  |      Key      | Data Type |
-  | :-----------: | :-------: |
-  | salaryRangeId |  String   |
-  |     label     |  String   |
 
 </details>
 
@@ -321,15 +309,7 @@ Returns a response containing the job details
 
 </details>
 
-### Quick Tips
 
-<details>
-<summary>Click to view</summary>
-<br>
-
-- To convert a list of items as a comma-separated string we can use the array method `join()`
-
-</details>
 
 ### Important Note
 
@@ -338,14 +318,7 @@ Returns a response containing the job details
 
 <br/>
 
-**The following instructions are required for the tests to pass**
 
-- Render `Home` Route component when the path in URL matches `/`
-- Render `Login` Route component when the path in URL matches `/login`
-- Render `Jobs` Route component when the path in URL matches `/jobs`
-- Render `Job Item Details` Route component when the path in URL matches `/jobs/:id`
-- Render `Not Found` Route component when the path in URL matches `/not-found`
-- No need to use the `BrowserRouter` in `App.js` as we have already included in `index.js`
 
 - User credentials
 
@@ -355,33 +328,9 @@ Returns a response containing the job details
 
   ```
 
-- Wrap the `Loader` component with an HTML container element and add the `data-testid` attribute value as **loader** to it
 
-  ```jsx
-  <div className="loader-container" data-testid="loader">
-    <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
-  </div>
-  ```
 
-- **Jobs Route**
 
-  - The HTML button element with search icon should have the `data-testid` attribute value as **searchButton** to it
-
-  ```jsx
-  <button type="button" data-testid="searchButton">
-    <BsSearch className="search-icon" />
-  </button>
-  ```
-
-  - The profile image should have the alt as **profile**
-  - The company logo images in Jobs Route should have the alt as **company logo**
-
-- **Job Details Route**
-  - The company logo image should have the alt as **job details company logo**
-  - The life at company image should have the alt as **life at company**
-  - The skill images should have the alt as the value of the key `name` from each object in the **skills** list received from the job details response
-  - The company logo image in similar job item should have the alt as **similar job company logo**
-  </details>
 
 ### Resources
 
@@ -428,9 +377,3 @@ Returns a response containing the job details
 - Roboto
 </details>
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
